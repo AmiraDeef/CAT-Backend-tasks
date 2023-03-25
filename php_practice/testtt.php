@@ -7,7 +7,7 @@
 
 <body>
 <?php
-
+$s=20;
 $books=[
     [
         'name' => 'Do Androids Dream of Electric Sheep',

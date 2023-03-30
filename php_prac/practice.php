@@ -476,8 +476,21 @@
 //$num=15;
 //function add_five(&$num)///& pass arg by reference
 //{
-//    $num+=5;
-//    return $num;
+//    return $num+=5;
+//
 //}
 //echo add_five($num).'<br>';//20
 //echo $num;//20
+////anonymous function
+//$AddingTen=function ($item){return $item+10; };
+//
+//echo '<pre>';
+//print_r($AddingTen(10)) ;
+//echo '</pre>';
+////array_map()
+////arrow function (lambda)
+//$nums=[20,50,80];
+//$AddingFive=array_map(fn($item)=>$item+5,$nums);
+//echo '<pre>';
+//print_r($AddingFive);
+//echo '</pre>';

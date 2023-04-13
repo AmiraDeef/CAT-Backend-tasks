@@ -6,7 +6,7 @@
             <h1 class="text-2xl font-bold">Sorry. Page Not Found.</h1>
 
             <p class="mt-4">
-                <a href="/" class="text-blue-500 underline">Go back home.</a>
+                <a href="/controllers/index.php" class="text-blue-500 underline">Go back home.</a>
             </p>
         </div>
     </main>

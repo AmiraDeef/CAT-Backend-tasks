@@ -2,4 +2,4 @@
 
 $heading = "Home";
 
-require "views/contact_view.php";
+require "views/contact.view.php";

@@ -22,7 +22,7 @@ class Database{
 
     public $connection;
 
-    public function __construct($config, $username = 'root', $password = '12345678')
+    public function __construct($config, $username = 'root', $password ='12345678')
     {
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
@@ -31,12 +31,12 @@ class Database{
         ]);
     }
 
-    public function query($query,$params=[])
+    public function query($query, $params = [])
     {
-        $statement=$this->connection->prepare($query);
-        $statement ->execute($params);
+        $statement = $this->connection->prepare($query);
+
+        $statement->execute($params);
+
         return $statement;
-
-
     }
 }

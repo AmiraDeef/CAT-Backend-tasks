@@ -494,3 +494,10 @@
 //echo '<pre>';
 //print_r($AddingFive);
 //echo '</pre>';
+$str="AMIRA";
+echo "the 3rd letter is $str[2]"."<br>";
+echo "the num of letters is ". strlen($str)."<br>";
+echo $str ."<br>";
+//update
+$str[3]="E";
+echo $str ."<br>";

@@ -494,10 +494,143 @@
 //echo '<pre>';
 //print_r($AddingFive);
 //echo '</pre>';
-$str="AMIRA";
-echo "the 3rd letter is $str[2]"."<br>";
-echo "the num of letters is ". strlen($str)."<br>";
-echo $str ."<br>";
-//update
-$str[3]="E";
-echo $str ."<br>";
+//$str="AMIRA";
+//echo "the 3rd letter is $str[2]"."<br>";
+//echo "the num of letters is ". strlen($str)."<br>";
+//echo $str ."<br>";
+////update
+//$str[3]="E";
+//echo $str ."<br>";
+//built-in function
+//lowercaseFOR 1ST LETTER
+//echo lcfirst("BLAAAAAAAAA")."<br>";
+////UPpercaseFOR 1ST LETTER
+//echo ucfirst("BLAAAAAAAAA")."<br>";
+////lower case and upper case string
+//echo strtolower("BLAAAAAAAAA")."<br>";
+//echo strtoupper("BLAAAAAAAAA")."<br>";
+//echo ucwords("bLAAAA AAAAA")."<br>";
+//echo ucwords("bLAAAA |AAAAA ggggg","|")."<br>";
+//echo str_repeat("BLAAAAAAAAA",5)."<br>";
+//print_r(str_split("BLAAAAAAAAA",3))."<br>";
+//$nums=["one","two","three"];
+//echo implode(" ",$nums)."<br>";
+//echo implode("% ",$nums)."<br>";
+//echo implode($nums)."<br>";
+//echo implode("| ",$nums)."<br>";
+//$st="elzero web school is cool";
+//echo '<pre>';
+//print_r(explode(" ",$st,3) );
+//echo '</pre>';
+//echo str_shuffle($st)."<br>";
+//echo strrev($st)."<br>";
+//echo strlen(trim("  kk j "))."<br>";
+//echo strlen("  kk j ")."<br>";
+//echo trim("kk#j##","##")."<br>";
+//echo rtrim("#kk#j##","##")."<br>";
+//echo ltrim("#kk#j##","##")."<br>";
+//echo chunk_split($st,8,"|")."<br>";
+//echo strip_tags("<h2>hello</h2>")."<br>";
+//echo strip_tags("<h2>hello</h2>","<h2>")."<br>";
+//echo "<h2>hello</h2>"."<br>";
+//echo nl2br("vvv\nvvvv\nvvvv",true)."<br>";
+//var_dump(strpos("hello lloo","o"));
+//echo "<br>";
+//var_dump(strpos("hello lloo","o",6));
+//echo "<br>";
+//var_dump(strpos("hello lloo","o",-4));
+//echo "<br>";
+//var_dump(strrpos("hello lloo","o"));
+//echo "<br>";
+//var_dump(stripos("hello lloo","O"));
+//echo "<br>";
+//var_dump(strripos("hello lloo","O"));
+//echo "<br>";
+//var_dump(substr_count("hello lloo","ll"));
+//echo "<br>";
+//var_dump(substr_count("hello lloo","ll",4));
+//echo "<br>";
+//var_dump(substr_count("hello lloo","ll",4,3));
+//echo "<br>";
+//var_dump(substr_count("hehe","heh"));
+//echo "<br>";
+//var_dump(substr_count("hehe","he"));
+//echo "<br>";
+//parse_str("name=lily&email=lily@blalala",$query);
+//echo '<pre>';
+//print_r($query);
+//echo '</pre>';
+//echo $query['name'];
+//echo "<br>";
+//echo quotemeta("nnn& 8 * {{ } ) | <br>");
+//echo "<br>";
+//echo str_pad("ggg",5,"|",STR_PAD_BOTH)."<br>";
+//echo str_pad("gggg",5,"|",STR_PAD_LEFT)."<br>";
+//echo str_pad("ggggg",5,"|",STR_PAD_RIGHT)."<br>";
+//echo "<br>";
+//echo strtr("go@%","@%","od");
+//echo "<br>";
+//$trans=["@"=> "o","%"=>"d"];
+//echo strtr("go@%",$trans);
+//echo "<br>";
+//echo str_replace("#","o","g##d",$counter);
+//echo "<br>";
+//echo str_replace(["#","%"],'o',"g#%d",);
+//echo "<br>";
+//echo $counter;
+//echo '<pre>';
+//print_r(str_replace(["one","two"],[1,2],["one","two","three","one"]));
+//echo '</pre>';
+//echo substr_replace("onetwo",1,3)."<br>";
+//echo substr_replace("onetwo",1,3,2)."<br>";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

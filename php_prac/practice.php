@@ -425,8 +425,6 @@
 //    return $l1 . $l2;
 //}
 //echo get_data (name:"yaya");
-
-
 //function calc(...$nums)
 //{
 //   echo func_num_args() . '<br>';//num of arg
@@ -447,7 +445,6 @@
 //
 //
 //echo calc(2,5,3);
-
 //function get_data($name,$country,$age,...$skills)///...ia splat op
 //{
 //    echo "hello ".$name .'<br>'." your country is ".$country.'<br>'.'your skills'.'<br>';
@@ -457,7 +454,6 @@
 //}
 //
 //get_data('lala',"Egypt",20,'php','testing');
-
 ////variable function
 //function one(){
 //    return "blalalalala";
@@ -583,12 +579,38 @@
 //echo '</pre>';
 //echo substr_replace("onetwo",1,3)."<br>";
 //echo substr_replace("onetwo",1,3,2)."<br>";
+//echo wordwrap($st,6,"<br>",true). "<br>";
+//echo ord("a")."<br>";
+//echo similar_text("AMIR","AMiR",$perc)."<br>";
+//echo $perc."<br>";
+//echo strstr("Web www","w")."<br>";
+//echo stristr("Web www","w")."<br>";//not sensetive
+//echo 10_000;
+//echo "<br>";
+//echo number_format(10000.23586,3,"_","#");
 
-
-
-
-
-
+//Array functions
+$friends=["Amira","Mai","s"=>"Mariam","Sohila",["Habiba","Noureen"]];
+$K=[7,1,2,5,9];
+echo '<pre>';
+print_r(array_chunk($friends,2,true)) ;
+echo '</pre>';
+echo '<pre>';
+print_r(array_change_key_case($friends,CASE_UPPER)) ;
+echo '</pre>';
+echo '<pre>';
+print_r(array_combine($K,$friends));//same length;
+echo '</pre>';
+$cou=[1,2,2,5,2,9];
+echo '<pre>';
+print_r(array_count_values($cou)) ;
+echo '</pre>';
+echo '<pre>';
+print_r(array_reverse($friends,true)) ;
+echo '</pre>';
+echo '<pre>';
+print_r(array_flip($friends)) ;
+echo '</pre>';
 
 
 

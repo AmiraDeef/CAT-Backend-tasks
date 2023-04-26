@@ -1,28 +1,11 @@
 <?php
 
-
-//class person{
-//    public $name;
-//    public $age;
-//
-//    public function Breathe(){
-//        echo $this->name. " is Breathing";
-//    }
-//}
-//
-//$person =new person();
-//$person->name ='Amira';
-//$person-> age=20;
-//
-//($person->Breathe());
-
-
-//connect to our MYSQL DataBase and execute a query
-class Database{
-
+class Database
+{
     public $connection;
+    public $statement;
 
-    public function __construct($config, $username = 'root', $password ='12345678')
+    public function __construct($config, $username = 'root', $password = '12345678')
     {
         $dsn = 'mysql:' . http_build_query($config, '', ';');
 
@@ -33,10 +16,34 @@ class Database{
 
     public function query($query, $params = [])
     {
-        $statement = $this->connection->prepare($query);
+        $this->statement = $this->connection->prepare($query);
 
-        $statement->execute($params);
+        $this->statement->execute($params);
 
-        return $statement;
+        return $this;
     }
+    public function findall(){
+        return $this->statement->fetchall();
+    }
+    public function find(){
+        return $this->statement->fetch();
+    }
+    public function findORfail(){
+       $result=$this->find();
+       if(!$result){
+        abort();
+       }
+       return $result;
+
+    }
+
+
+
+
+
+
+
+
+
+
 }

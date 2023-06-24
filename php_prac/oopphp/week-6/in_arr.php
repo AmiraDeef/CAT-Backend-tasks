@@ -11,4 +11,6 @@ function found_arr($value, $arr = [])
 }
 
 $name = ["amira", "sara"];
-echo found_arr("sara", $name);
+var_dump(in_array("s", $name));
+echo "<br>";
+var_dump(found_arr("sar", $name));

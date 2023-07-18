@@ -1,6 +1,8 @@
 <?php
+session_start();
 require "login.php";
-
+//require "signup.php";
+require "validator.php";
 
 $email = $_POST['email'] ?? '';
 $password = $_POST['password'] ?? '';
@@ -10,9 +12,17 @@ $login = new Login($email, $password);
 $login->Checking();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['signup'])) {
-    require_once "signup.php";
-    $username = $_POST['username'] ?? '';
-
     $sign = new Signup($username, $email, $password);
-    $sign->validation();
+    $errors = $sign->validation();
+
+    if (empty($errors)) {
+
+        $_SESSION['logged_in'] = true;
+        $_SESSION['email'] = $email;
+        header('Location: welcome.php');
+        exit;
+    } else {
+
+        require_once "signup.php";
+    }
 }

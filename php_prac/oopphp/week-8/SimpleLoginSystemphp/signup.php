@@ -28,5 +28,6 @@ class Signup
                 $errors['password'] = 'Please provide a password of at least six characters.';
             }
         }
+        return $errors;
     }
 }

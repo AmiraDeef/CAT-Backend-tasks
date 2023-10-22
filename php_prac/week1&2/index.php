@@ -96,14 +96,14 @@ if (isset($_POST['submit'])){
 
     <div class="form-group">
     <label>Username
-        <input type="text" name="username" placeholder="Enter your Username" class="form-control">
+        <input type="text" name="username" placeholder="Enter your Username" class="form-control" value="<?php echo isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '' ?>">
     </label>
         <p><?=($error['username'])??'' ?></p>
     </div>
 
     <div class="form-group">
     <label>Email
-        <input type="email" name="email" placeholder="Enter your Email" class="form-control" >
+        <input type="email" name="email" placeholder="Enter your Email" class="form-control" value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : '' ?>" >
     </label>
         <p><?=($error['email'])??'' ?></p>
     </div>

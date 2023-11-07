@@ -3,6 +3,8 @@ class Cart
 {
     private array $items = [];
 
+    public $totalPrice = 0;
+
     // Find product in the cart
     private function findProductById(int $id)
     {
@@ -48,26 +50,33 @@ class Cart
     // Get the total price of items in the cart
     public function getTotalPrice()
     {
-        $totalPrice = 0;
+        global $totalPrice;
         foreach ($this->items as $item) {
             $totalPrice += $item['quantity'] * $item['product']->getPrice();
         }
         return $totalPrice;
     }
     //to display items details
-    public function getCartItems()
+    public function getItems()
     {
+        $cartItems = [];
+
         foreach ($this->items as $item) {
             $product = $item['product'];
-            echo "Product ID: " . $product->getId() . "<br>";
-            echo "Product Name: " . $product->getName() . "<br>";
-            echo "Price: $" . $product->getPrice() . "<br>";
-            echo "Quantity: " . $product->getQuantity() . "<br>";
-            echo "Total Price: $" . ($product->getPrice() * $product->getQuantity()) . "<br>";
-            echo "<br>";
+            $cartItems[] = $product;
         }
+
+        return $cartItems;
     }
 
 
-    //finish the purchase ..!
+
+
+    //finish the purchase ..!!!!!!
+    public function emptyCart()
+    {
+        $this->items = [];
+
+        $this->totalPrice = 0;
+    }
 }

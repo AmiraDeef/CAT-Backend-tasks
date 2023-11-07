@@ -15,6 +15,12 @@ class Category
     {
         $this->name = $name;
     }
+    public function addProduct(Product $product)
+    {
+        $product->addToCategory($this);
+        //$this->name = $product->getCategory();
+
+    }
     public function addVariant(Variant $variant)
     {
         $this->variants[] = $variant;
